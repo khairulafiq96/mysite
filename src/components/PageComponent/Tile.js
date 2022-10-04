@@ -31,19 +31,17 @@ class Tile extends Component{
         }
 
         return(
-            <div >
+            <div className="" >
                 <div onClick={()=> this.updateState(true)} 
-                        className='flex flex-col bg-mysite_light p-2 w-[400px] h-[300px] 
-                         hover:bg-deepblue hover:text-white hover:shadow-xl'>
-                    <div className='flex h-2/3 border-2 border-black-200 border-solid w-full'>
-                        Image
+                        className='flex flex-col bg-mysite_light p-2 
+                                    sm:w-[400px] sm:h-[300px] w-[300px] h-[200px]
+                                  hover:bg-deepblue hover:text-white hover:shadow-xl
+                                    hover:cursor-pointer'>
+                    <div className='flex items-center h-full w-full'>
+                        <img className="object-scale-down h-full w-full p-5" 
+                            src={parentToChild['image']}></img>
                     </div>
-                    <div className='flex flex-1 items-center'>
-                        <div className='text-4xl '>
-                            {parentToChild.title}
-                            
-                        </div>
-                    </div>
+
                 </div>
                 {setButtonPopup ? <Popup onClose={()=>this.updateState(false)} visible={setButtonPopup} details={parentToChild}></Popup> : <div></div>}
             </div>

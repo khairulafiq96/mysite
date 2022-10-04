@@ -10,37 +10,40 @@ class CategoryPage extends Component {
        const projectData = {
                                 "project1" : {
                                     "title" : "bitPasar",
-                                    "image" : "image",
+                                    "image" : "https://github.com/khairulafiq96/Repo_Media/blob/master/mysite/media/bitpasar.png?raw=true",
                                     "description" : "E-commerce site with ethereum payment",
                                     "website" : "https://bitpasar.herokuapp.com/",
                                     "development" : ['React','Metamask','ethers', 'Tailwind css', 'Python', 'Flask', 'PostgresSQL'],
                                     "deployment" : ['Firebase Storage', "Heroku", "GitHub"],
-                                    "github" : "https://github.com/khairulafiq96/bitpasar"
+                                    "github" : "https://github.com/khairulafiq96/bitpasar",
+                                    "date" : "2022"
                                 },
                                 "project2" : {
                                     "title" : "mySentimen",
-                                    "image" : "image",
+                                    "image" : "https://github.com/khairulafiq96/Repo_Media/blob/master/mysite/media/mysentimen.png?raw=true",
                                     "description" : "Polling web app for the malaysian parliament cabinet",
                                     "website" : "https://mysentimen.herokuapp.com/",
                                     "development" : ['React','Python', 'Flask', 'PostgresSQL'],
                                     "deployment" : ["Heroku", "GitHub"],
-                                    "github" : "https://github.com/khairulafiq96/mysentimen"
+                                    "github" : "https://github.com/khairulafiq96/mysentimen",
+                                    "date" : "2022"
                                 },
                                 "project3" : {
                                     "title" : "FaceTag",
-                                    "image" : "image",
+                                    "image" : "https://github.com/khairulafiq96/Repo_Media/blob/master/mysite/media/facetag.png?raw=true",
                                     "description" : "Facial recognition attendance ubuntu app",
                                     "website" : "https://github.com/khairulafiq96/FaceTag",
                                     "development" : ['Python', 'PyGTK', 'Flask'],
                                     "deployment" : null,
-                                    "github" : null
+                                    "github" : null,
+                                    "date" : "2018"
                                 }          
                             }
 
 
         return(
-            <div className='flex flex-col space-y-[55px] w-full'>
-                <div className='font-semibold sm:text-xl md:text-6xl text-white pt-[55px]'>
+            <div className='fadeInElement  flex flex-col space-y-[55px] w-full'>
+                <div className='font-semibold text-4xl md:text-6xl text-white sm:pt-[55px] pt-[25px]'>
                     Full Stack software engineer, currently in career transition. 
                     Previously at Exxonmobil as an Automation Developer - in Malaysia
                 </div>
@@ -48,7 +51,8 @@ class CategoryPage extends Component {
                     <div className='text-white text-2xl'>
                         Projects
                     </div>
-                    <div className='flex flex-row space-x-4 pt-[25px]'>
+                    <div className='flex flex-col space-y-5 space-x-0
+                                    2xl:flex-row flex-wrap 2xl:space-x-4 2xl:space-y-0 pt-[25px]'>
                         {Object.keys(projectData).map(function (keyValue, index){
                                 return(<Tile key={keyValue} parentToChild={projectData[keyValue]} ></Tile>)
                         })}
@@ -58,9 +62,14 @@ class CategoryPage extends Component {
                     <div className='border-solid '>
                         About Me
                     </div>
-                    <div className='flex flex-row pt-[25px]'>
+                    <div className='flex flex-col space-y-10 space-x-0 
+                                    xl:flex-row xl:space-x-10 xl:space-y-0
+                                    pt-[25px]'>
                         <div className='w-1/3'>
-                            <div>Image</div>
+                            <div>
+                            <img className='object-scale-down h-full w-full' 
+                                src="https://github.com/khairulafiq96/Repo_Media/blob/master/mysite/media/new_dp.JPG?raw=true"></img>
+                            </div>
                         </div>
                         <div className='text-sm w-full leading-normal'>
                             <div>

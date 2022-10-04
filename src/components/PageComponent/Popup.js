@@ -6,13 +6,13 @@ function Popup ({visible, onClose, details}){
                     className="fixed w-screen h-screen 
                                 flex items-center justify-center
                                 inset-0 bg-black bg-opacity-30 backdrop-blur-sm">
-                        <div className="bg-mysite text-white w-1/2 h-2/3 p-10">
+                        <div className="fadeInPopup bg-mysite text-white xl:w-1/2 xl:h-2/3 p-10">
                             <div className="flex flex-row items-center">
                                 <div className="font-semibold text-2xl float-left">
-                                {details["title"]}
+                                {details["title"]} ({details["date"]})
                                 </div>
                                 <button className="ml-auto box py-2 px-4 
-                                                bg-mysite_light  hover:bg-red-200
+                                                bg-mysite_light  hover:bg-deepblue hover:text-white
                                                 text-black float-right" 
                                     onClick={onClose}>
                                     X
@@ -21,7 +21,7 @@ function Popup ({visible, onClose, details}){
                             <div className="text-4xl py-5">
                                 {details["description"]}
                             </div>
-                            <a href={details["website"]} target="blank" 
+                            <a href={details["website"]} target="_blank" 
                                 className="text-xl break-all underline hover:text-blue-200">
                                 {details["website"]}
                             </a>
@@ -58,7 +58,7 @@ function Popup ({visible, onClose, details}){
                                                     <div>
                                                         Read the code
                                                     </div>
-                                                    <a href={details['github']} target="blank"
+                                                    <a href={details['github']} target="_blank"
                                                         className="pt-2 underline hover:text-blue-200">
                                                         {details['github']}
                                                     </a>

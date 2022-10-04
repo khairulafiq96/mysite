@@ -6,10 +6,13 @@ class Header extends Component {
     render(){
 
         return(
-            <div className='backdrop-blur bg-mysite py-16'>
-                <div className='container mx-auto text-white'>
-                        <div className='float-left text-2xl font-semibold'>Khairul Afiq Azman</div>
-                        <div className='float-right text-2xl flex flex-row space-x-[70px]'>
+            <div className='fadeInElement backdrop-blur bg-mysite w-full sm:py-16 py-8'>
+                <div className='flex text-xs  sm:text-2xl container mx-auto text-white'>
+                        <div className='font-semibold'>Khairul Afiq Azman</div>
+                        <div className='ml-auto flex flex-row sm:space-x-[70px] space-x-[20px]'>
+                            <Link className='hover:text-blue-200 hover:cursor-pointer' 
+                                to="contactme" smooth={true}>
+                                Contact Me</Link>
                             <Link className='hover:text-blue-200 hover:cursor-pointer' 
                                 to="project" smooth={true}>
                                 Projects</Link>
@@ -18,7 +21,7 @@ class Header extends Component {
                                     About</Link>
                             <a className='hover:text-blue-200 hover:cursor-pointer'
                                 href='https://kafiqazman.tumblr.com/'
-                                target="blank">
+                                target="_blank">
                                 Archive</a>
                         </div>
                 </div>

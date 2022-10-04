@@ -4,16 +4,26 @@ import '../Styles/Footer.css'
 class Footer extends Component {
     render(){
         return(
-            <div className='backdrop-blur bg-mysite py-16'>
+            <div id="contactme" 
+                className=' pb-24 sm:pt-52 pt-28 '>
                 <div className='container mx-auto text-white'>
-                        <div className='float-left text-2xl font-semibold'>Khairul Afiq Azman</div>
-                        <div className='float-right text-2xl flex flex-row space-x-[70px]'>
-                            <div>Projects</div>
-                            <div>About</div>
-                            <div>Archive</div>
+                        <div className='flex flex-row justify-center space-x-[70px] text-sm'>
+                            <a className='hover:text-blue-200 hover:drop-shadow-md'
+                                href="https://www.linkedin.com/in/kafiqazman/" target="_blank">
+                                Linkedin
+                            </a>
+                            <a className='hover:text-blue-200 hover:drop-shadow-md'
+                                href="https://github.com/khairulafiq96" target="_blank">
+                                GitHub
+                            </a>
+                            <a className='hover:text-blue-200 hover:drop-shadow-md'
+                                href="mailto:k.afiq.azman@gmail.com" target="_blank">
+                                Email
+                            </a>
                         </div>
                 </div>
             </div>
+        
         )
     }
 
